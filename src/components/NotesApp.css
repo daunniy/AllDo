@@ -1,0 +1,96 @@
+.memo-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+div {
+  vertical-align: top;
+}
+
+.section {
+  max-height: 450px;
+}
+
+.note-item {
+  width: 200px;
+  background: url('../../public/memo_bg.png') no-repeat;
+  background-size: cover;
+  border: none;
+  border: 0px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 20px !important;
+}
+
+li div:focus {
+  border: none;
+  outline: none;
+}
+.add-memo {
+  padding: 7px 14px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  font-size: 24px;
+  color: rgba(0,0,0,0.5);
+  box-shadow: 1px 4px 10px 0 rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all .3s;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0;
+}
+.add-memo:hover {
+  box-shadow: 4px 6px 14px 0 rgba(0,0,0,0.1);
+}
+.delete-button {
+  position: absolute;
+  border: none;
+  background: none;
+  padding: 4px;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: all .3s;
+  cursor: pointer;
+}
+li:hover .delete-button, li:hover .add-memo { 
+  opacity: 1;
+}
+
+
+
+.notes-wrapper {
+  display: flex;
+}
+
+.notes-list {
+  transition: all 0.3s ease;
+}
+
+
+.note-item {
+  background-color: #f4f4f4;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+
+}
+
+.note-item.selected {
+  background-color: #e0e0e0;
+}
+
+.note-detail {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+}
+
+

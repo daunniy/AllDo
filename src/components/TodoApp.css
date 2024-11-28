@@ -1,0 +1,144 @@
+/* Reset Styles */
+ul, li, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* General Styles */
+input {
+  background: #fff;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.todoApp-container {
+  width: 100%;
+  max-height: 600px;
+}
+
+/* Container Styles */
+.todo-list {
+  padding: 20px;
+  border-radius: 20px;
+  background: #eee;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-list-items,
+.completed-todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+}
+
+.todo-list-items::-webkit-scrollbar,
+.completed-todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todo-list-items::-webkit-scrollbar-thumb,
+.completed-todo-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+/* Input Container Styles */
+.todo-input-container {
+  margin-bottom: 20px;
+}
+
+.todo-input-container input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  width: 300px;
+}
+
+.todo-input-container button {
+  padding: 10px 15px;
+  background-color: #4b9ff4;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Add Button Styles */
+.todo-add-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.add-todo-button {
+  background: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Todo Item Styles */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+  background-color: #e3e3e3;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item button {
+  background: none;
+  color: #ff0000;
+  margin-left: 10px;
+}
+
+.todo-item button:hover {
+  text-decoration: underline;
+}
+
+.todo-item span {
+  flex-grow: 1;
+}
+
+.todo-item input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: inherit;
+}
+
+.todo-item input[type="text"]:focus,
+.todo-item input[type="text"]:active {
+  outline: none;
+}
+
+/* General Input Styles */
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
