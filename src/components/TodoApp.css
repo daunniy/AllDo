@@ -111,7 +111,7 @@ h2, h3 {
 
 /* Show on Hover */
 .todo-list-items .sortable-item:hover .sortable-item-handle,
-.todo-list-items .sortable-item:hover .sortable-item-delete {
+.sortable-item:hover .sortable-item-delete {
   opacity: 1; /* 완전히 보이도록 설정 */
   visibility: visible; /* 보이도록 설정 */
 }

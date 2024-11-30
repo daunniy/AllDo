@@ -101,6 +101,10 @@ li:hover .delete-button, li:hover .add-memo {
   margin: 0; /* 기본 여백 제거 */
   animation: bounce 1.5s infinite; /* 텍스트 애니메이션 */
   cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
 }
 
 /* 텍스트가 튀는 애니메이션 */
