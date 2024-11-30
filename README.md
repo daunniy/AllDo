@@ -1,3 +1,21 @@
+# AllDo
+### A Simple React Project for Managing Todos, Notes, and Translations
+
+This project includes:
+- **TodoApp**: Manage your daily tasks efficiently.
+- **NotesApp**: Keep track of important notes.
+- **Korean-English Translator**: Translate text between Korean and English.
+
+## How to Run
+1. Clone this repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm start` to start the development server.
+
+## Features
+- **Dynamic Theme**: Switch between Light and Dark modes.
+- **Interactive Components**: Add, edit, and delete todos and notes.
+- **Responsive Design**: Optimized for mobile and desktop.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
