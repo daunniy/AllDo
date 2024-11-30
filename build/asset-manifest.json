@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AllDo/static/css/main.17b8d3e7.css",
+    "main.js": "/AllDo/static/js/main.6a5f2ce5.js",
+    "static/js/453.4ec49188.chunk.js": "/AllDo/static/js/453.4ec49188.chunk.js",
+    "static/media/memo_bg.png": "/AllDo/static/media/memo_bg.e4ba8de7b38884a23500.png",
+    "index.html": "/AllDo/index.html",
+    "main.17b8d3e7.css.map": "/AllDo/static/css/main.17b8d3e7.css.map",
+    "main.6a5f2ce5.js.map": "/AllDo/static/js/main.6a5f2ce5.js.map",
+    "453.4ec49188.chunk.js.map": "/AllDo/static/js/453.4ec49188.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17b8d3e7.css",
+    "static/js/main.6a5f2ce5.js"
+  ]
+}
