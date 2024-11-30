@@ -132,49 +132,52 @@ const NotesApp = () => {
   };
 
   return (
-    <div>
-      
-      {/* 메모가 없을 때 "메모를 추가하세요" 안내 문구 표시 */}
-      {notes.length === 0 && (
-        <div className="no-notes" onClick={addNote}>
-          <p>메모를 추가하세요!</p>
-        </div>
-      )}
-
-      {/* 메모 목록 */}
-      <ul>
-        {notes.map(note => (
-          <Draggable 
-            key={note.id} 
-            position={note.position}  // 위치를 state로 관리하여 업데이트된 위치로 반영
-            bounds="html"
-            onStop={(e, data) => handleDragStop(note.id, e, data)} // 드래그 후 위치 저장
-          >
-            <li 
-              className="note-item" 
-              style={{ 
-                position: 'absolute', 
-                zIndex: zIndexes[note.id] || 0  // 클릭된 메모의 z-index를 높여서 맨 위로 표시
-              }}
-              onClick={() => bringToFront(note.id)} // 클릭 시 해당 메모의 z-index를 올림
-            >
-              <div
-                contentEditable
-                suppressContentEditableWarning
-                onBlur={(e) => editNote(note.id, e.target.innerText)} // 수정 후 onBlur 이벤트로 저장
-              >
-                {note.content || ""}
-              </div>
-              <div>
-                <small>{formatDate(note.lastEdited)}</small>
-              </div>
-              <button className="delete-button" onClick={() => deleteNote(note.id)}>X</button>
-              <button className="add-memo" onClick={addNote}>+</button>
-            </li>
-          </Draggable>
-        ))}
-      </ul>
+<div>
+  {notes.length === 0 && (
+    <div className="no-notes" onClick={addNote}>
+      <p>📝 새 메모를 작성해보세요!</p>
     </div>
+  )}
+
+  <ul>
+    {notes.map(note => (
+      <Draggable
+        key={note.id}
+        position={note.position}
+        bounds="html"
+        onStop={(e, data) => handleDragStop(note.id, e, data)}
+      >
+        <li
+          className="note-item"
+          style={{
+            position: 'absolute',
+            zIndex: zIndexes[note.id] || 0,
+          }}
+          onClick={(e) => {
+            e.stopPropagation(); // 이벤트 충돌 방지
+            bringToFront(note.id);
+          }}
+        >
+          <div
+            contentEditable
+            suppressContentEditableWarning
+            onBlur={(e) => editNote(note.id, e.target.innerText)}
+            className="note-content"
+            data-placeholder="내용을 입력하세요"
+          >
+            {note.content}
+          </div>
+          <div>
+            <small>{formatDate(note.lastEdited)}</small>
+          </div>
+          <button className="delete-button" onClick={() => deleteNote(note.id)}>X</button>
+          <button className="add-memo" onClick={addNote}>+</button>
+        </li>
+      </Draggable>
+    ))}
+  </ul>
+</div>
+
   );
 };
 
